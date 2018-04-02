@@ -1,0 +1,30 @@
+.a {
+  color:#39e5b4;
+}
+.navbar-inverse {
+  background-color: #2460c1;
+  border-color: #249ec1;
+}
+
+.navbar-toggle {
+  border-color: #39e5b4;
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: #39e5b4;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #39e5b4;
+}
+
+.navbar-brand>.active>a:hover,.active>a:focus {
+  background: #39e5b4;
+  text-decoration-color: #39e5b4
+}
+
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
+  text-decoration-color: #39e5b4;
+  color: #39e5b4
+}
+
