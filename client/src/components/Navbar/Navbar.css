@@ -1,0 +1,52 @@
+.a {
+  color: #249ec1;
+}
+
+.navbar-brand {
+  padding: 0px;
+}
+
+.navbar-brand > img {
+  height: 100%;
+  background-color: white;
+  padding: 10px;
+}
+
+.navbar-inverse {
+  background-color: #2460c1;
+  border-color: #249ec1;
+}
+
+.navbar-toggle {
+  border-color: #249ec1;
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: #249ec1;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #249ec1;
+}
+
+.navbar-brand > .active > a:hover,
+.active > a:focus {
+  background: #249ec1;
+  text-decoration-color: #249ec1;
+}
+
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+  background-color: #249ec1;
+  color: #249ec1;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus,
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+  color: #ffffff;
+  background-color: #249ec1;
+  text-decoration: none;
+}
