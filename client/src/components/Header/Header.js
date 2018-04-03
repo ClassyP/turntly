@@ -1,5 +1,5 @@
 import React from "react";
-import "./Navbar.css";
+import "./Header.css";
 import logo from "./logo.png";
 import DropDownMenu from "../DropDownMenu";
 import { Image, Navbar, Nav } from "react-bootstrap";
