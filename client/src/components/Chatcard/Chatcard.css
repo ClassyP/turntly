@@ -1,0 +1,14 @@
+.panel-default > .panel-heading {
+  color: #ffffff;
+  background-color: #249ec1;
+  border-color: #39e5b4;
+  box-shadow: 1px -5px 41px 3px rgba(153, 153, 153, 1);
+}
+
+.panel-body {
+  padding: 15px;
+  border-color: #;
+  border: 3px;
+  height: 550px;
+  box-shadow: 1px 7px 41px 3px rgba(153, 153, 153, 1);
+}
