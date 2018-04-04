@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Index.css";
 import Header from "./components/Header";
 import Chatcard from "./components/Chatcard";
 
