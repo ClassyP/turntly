@@ -10,11 +10,12 @@
   height: 100%;
   background-color: white;
   padding: 10px;
+  opacity: 0.8;
 }
 
 .navbar-inverse {
-  background-color: #2460c1;
-  border-color: #249ec1;
+  background-color: #2460c100;
+  border-color: #e53c3700;
 }
 
 .navbar-toggle {
@@ -22,7 +23,7 @@
 }
 
 .navbar-inverse .navbar-toggle {
-  border-color: #249ec1;
+  border-color: none;
 }
 
 .navbar-inverse .navbar-brand {
@@ -49,4 +50,9 @@
   color: #ffffff;
   background-color: #249ec1;
   text-decoration: none;
+}
+
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+  border-color: #e53c3700;
 }
