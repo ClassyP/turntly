@@ -1,0 +1,20 @@
+.has-feedback {
+  position: relative;
+  width: 200px;
+  height: 0px;
+  float: right;
+}
+
+.help-block {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #ffffff;
+}
+
+.has-feedback .form-control {
+  padding-right: 10px;
+}
+
+.form {
+  padding-top: 20px;
+}

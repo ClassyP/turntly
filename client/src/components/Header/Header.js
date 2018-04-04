@@ -2,6 +2,7 @@ import React from "react";
 import "./Header.css";
 import logo from "./logo.png";
 import DropDownMenu from "../DropDownMenu";
+import Searchbar from "../Searchbar";
 import { Image, Navbar, Nav } from "react-bootstrap";
 
 const Header = () => (
@@ -13,6 +14,7 @@ const Header = () => (
         </a>
       </Navbar.Brand>
     </Navbar.Header>
+    <Searchbar />
     <Navbar.Collapse>
       <Nav pullRight>
         <DropDownMenu />
