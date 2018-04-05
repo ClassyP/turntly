@@ -8,8 +8,9 @@ import {
   FormControl,
   HelpBlock
 } from "react-bootstrap";
+import Actions from "../../actions/Actions";
 
-class Searchbar extends React.Component {
+export default class Searchbar extends React.Component {
   constructor(props, context) {
     super(props, context);
 
@@ -30,6 +31,8 @@ class Searchbar extends React.Component {
 
   handleChange(e) {
     this.setState({ value: e.target.value });
+    let events = Actions.getEvents(e.target.value);
+    console.log("events", events);
   }
 
   render() {
@@ -54,4 +57,4 @@ class Searchbar extends React.Component {
   }
 }
 
-export default Searchbar;
+//export default Searchbar;
