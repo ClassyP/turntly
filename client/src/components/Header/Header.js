@@ -14,8 +14,10 @@ const Header = () => (
         </a>
       </Navbar.Brand>
     </Navbar.Header>
-    <Searchbar />
     <Navbar.Collapse>
+      <Nav>
+        <Searchbar />
+      </Nav>
       <Nav pullRight>
         <DropDownMenu />
       </Nav>

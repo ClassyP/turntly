@@ -17,7 +17,8 @@ export default class Searchbar extends React.Component {
     this.handleChange = this.handleChange.bind(this);
 
     this.state = {
-      value: ""
+      value: "",
+      events: [],
     };
   }
 
@@ -31,8 +32,8 @@ export default class Searchbar extends React.Component {
 
   handleChange(e) {
     this.setState({ value: e.target.value });
-    let events = Actions.getEvents(e.target.value);
-    console.log("events", events);
+    // let events = Actions.getEvents(e.target.value);
+    // console.log("events", events);
   }
 
   render() {
