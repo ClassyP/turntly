@@ -64,8 +64,8 @@ export default class Searchbar extends React.Component {
               type="input"
               value={this.state.value}
               placeholder="Event Name or Venue"
-              onChange={this.handleChange}
-              onKeyPress={e => {
+              onChange={this.handleChange} //handles key strokes 
+              onKeyPress={e => { //allows the enter key to submit form 
                 if (e.key === 'Enter') {
                   this.query();
                 }
