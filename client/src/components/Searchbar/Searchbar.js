@@ -2,9 +2,11 @@
 import React from "react";
 import "./Searchbar.css";
 import {
+  Button,
   Form,
   FormGroup,
   ControlLabel,
+  InputGroup,
   FormControl,
   HelpBlock
 } from "react-bootstrap";
@@ -18,8 +20,10 @@ export default class Searchbar extends React.Component {
 
     this.state = {
       value: "",
-      events: [],
+      events: []
     };
+
+    this.query = this.query.bind(this);
   }
 
   getValidationState() {
@@ -31,9 +35,19 @@ export default class Searchbar extends React.Component {
   }
 
   handleChange(e) {
+    e.preventDefault();
+    console.log('e', e);
+    console.log('e.target.value', e.target.value);
     this.setState({ value: e.target.value });
+    
     // let events = Actions.getEvents(e.target.value);
     // console.log("events", events);
+  }
+
+  query() {
+    alert('QUERYING!');
+    let events = Actions.getEvents(this.state.value);
+    console.log("events", events);
   }
 
   render() {
@@ -44,12 +58,26 @@ export default class Searchbar extends React.Component {
           validationState={this.getValidationState()}
         >
           {/* <ControlLabel>Search</ControlLabel> */}
-          <FormControl
-            type="text"
-            value={this.state.value}
-            placeholder="Event Name or Venue"
-            onChange={this.handleChange}
-          />
+
+          <InputGroup>
+            <FormControl
+              type="input"
+              value={this.state.value}
+              placeholder="Event Name or Venue"
+              onChange={this.handleChange}
+              onKeyPress={e => {
+                if (e.key === 'Enter') {
+                  this.query();
+                }
+              }}
+            />
+            <InputGroup.Button>
+              <Button onClick={this.query}>
+                Submit
+              </Button>
+            </InputGroup.Button>
+          </InputGroup>
+
           <FormControl.Feedback />
           {/* <HelpBlock>*only letters*</HelpBlock> */}
         </FormGroup>
