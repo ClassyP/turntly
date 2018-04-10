@@ -1,19 +1,11 @@
-.a {
-    color: #249ec1;
+
+  #jumboheader {
+    background-image: url("./pexels-photo.jpg");
+    background-size: cover;
+    /* padding: 10px; */
   }
   
-  .navbar-brand {
-    padding: 0px;
-  }
-  
-  .mr-auto > img {
-    height: 100%;
-    background-color: white;
-    padding: 10px;
-    opacity: 0.8;
-  }
-  
-  .navbar-inverse {
+  /* .navbar-inverse {
     background-color: #2460c100;
     border-color: #e53c3700;
   }
@@ -56,4 +48,4 @@
   .navbar-inverse .navbar-form {
     border-color: #e53c3700;
   }
-  
+   */

@@ -34,10 +34,10 @@ export default class Header extends React.Component {
   render() {
     return (
       <div>
-        <Jumbotron>
+        <Jumbotron id = "jumboheader">
           <div>
             <Navbar color="faded" light>
-              <NavbarBrand href="/" Image src={logo} className="mr-auto">
+              <NavbarBrand href="/" Image src={logo.png} className="mr-auto">
                 beta v1.2
               </NavbarBrand>
               <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
@@ -62,8 +62,7 @@ export default class Header extends React.Component {
           </p>
           <hr className="my-2" />
           <p>
-            It uses utility classes for typgraphy and spacing to space content
-            out within the larger container.
+           Search for Venues, checkin into events, and see whats Turntly
           </p>
           <p className="lead">
             <Searchbar query={this.props.query} />
