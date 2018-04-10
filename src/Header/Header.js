@@ -11,6 +11,9 @@ import {
   NavLink
 } from "reactstrap";
 import Searchbar from "../Searchbar";
+import "./Header.css";
+import logo from "./logo.png";
+
 
 
 export default class Header extends React.Component {
@@ -34,8 +37,8 @@ export default class Header extends React.Component {
         <Jumbotron>
           <div>
             <Navbar color="faded" light>
-              <NavbarBrand href="/" className="mr-auto">
-                reactstrap
+              <NavbarBrand href="/" Image src={logo} className="mr-auto">
+                beta v1.2
               </NavbarBrand>
               <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
               <Collapse isOpen={!this.state.collapsed} navbar>
