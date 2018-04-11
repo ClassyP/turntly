@@ -17,6 +17,8 @@
     "nodemon": "^1.11.0"
   },
   "dependencies": {
-    "express": "^4.15.4"
+    "dotenv": "^5.0.1",
+    "express": "^4.15.4",
+    "mongodb": "^3.0.5"
   }
 }

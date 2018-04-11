@@ -1,7 +1,15 @@
 const express = require("express");
 const path = require("path");
+const dotenv = require("dotenv");
+const MongoClient = require("mongodb").MongoClient;
+const f = require("util").format;
+const assert = require("assert");
 const PORT = process.env.PORT || 3001;
 const app = express();
+
+dotenv.load();
+
+
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
