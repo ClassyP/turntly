@@ -1,20 +1,15 @@
-const express = require("express");
-const path = require("path");
-const PORT = process.env.PORT || 8001;
+const express = require('express');
+const bodyParser = require('body-parser')
+const path = require('path');
 const app = express();
-//require('dotenv').config();
+app.use(express.static(path.join(__dirname, 'build')));
 
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
-
-// Send every request to the React app
-// Define any API routes before this runs
-app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+app.get('/ping', function (req, res) {
+ return res.send('pong');
 });
 
-app.listen(PORT, function() {
-  console.log(`🌎 ==> Server now on port ${PORT}!`);
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
+
+app.listen(process.env.PORT || 8080);

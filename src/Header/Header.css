@@ -1,0 +1,11 @@
+
+  #jumboheader {
+    background-image: url("./pexels-photo.jpg");
+    background-size: cover;
+    /* padding: 10px; */
+  }
+  
+.navbar-brand {
+    background-color: #2460c100;
+    border-color: #e53c3700;
+  }
