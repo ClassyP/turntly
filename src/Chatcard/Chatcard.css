@@ -1,4 +1,4 @@
 #chatcard {
-
-  }
-  
+  flex-direction: row;
+  flex-flow: initial;
+}
