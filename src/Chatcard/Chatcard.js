@@ -11,6 +11,7 @@ import {
   Row,
   Col
 } from "reactstrap";
+import "./Chatcard.css";
 
 const Chatcard = props => {
   const venue = props.venue;

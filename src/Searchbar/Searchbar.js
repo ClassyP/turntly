@@ -8,6 +8,7 @@ import {
   FormGroup,
   HelpBlock
 } from "reactstrap";
+import "./Searchbar.css";
 
 export default class Searchbar extends React.Component {
   state = {
@@ -23,10 +24,10 @@ export default class Searchbar extends React.Component {
 
   handleKeyPress = e => {
     //console.log('e', e);
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       this.handleSubmit();
     }
-  }
+  };
 
   handleSubmit = () => {
     this.props.query(this.state.value);
@@ -45,7 +46,9 @@ export default class Searchbar extends React.Component {
             onKeyPress={this.handleKeyPress} // checks for enter keypress
           />
           <InputGroupAddon addonType="append">
-            <Button onClick={this.handleSubmit}>Submit</Button>
+            <Button onClick={this.handleSubmit} id="submit">
+              Submit
+            </Button>
           </InputGroupAddon>
         </InputGroup>
       </div>

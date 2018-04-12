@@ -14,13 +14,15 @@
   font-weight: 300;
   line-height: 1.2;
   color: #249ec1;
-  font-family: "Permanent Marker", cursive;
+  /* font-family: "Permanent Marker", cursive; */
+  font-family: "Sarpanch", sans-serif;
   opacity: 0.8;
 }
 
 #search-key {
   color: snow;
-  font-family: "Permanent Marker", cursive;
+  /* font-family: "Permanent Marker", cursive; */
+  font-family: "Sarpanch", sans-serif;
   opacity: 0.8;
 }
 
