@@ -37,7 +37,7 @@ export default class Header extends React.Component {
         <Jumbotron id = "jumboheader">
           <div>
             <Navbar color="faded" light>
-              <NavbarBrand href="/" className="mr-auto"> <img src= {logo} width="256" height="110" alt=""/>
+              <NavbarBrand href="/" className="mr-auto"> <img src={logo} width="256" height="110" alt=""/>
                 beta v1.2
               </NavbarBrand>
               <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />

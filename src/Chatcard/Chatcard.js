@@ -1,16 +1,29 @@
 import React from 'react';
 import { Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button } from 'reactstrap';
+  CardTitle, CardSubtitle, Button, Badge } from 'reactstrap';
 
 const Chatcard = (props) => {
+  const venue = props.venue;
+  // prefix + size + suffix
+  const size = '300x500';
+  const imgUrl = venue.images.photos.items[0].prefix + size + venue.images.photos.items[0].suffix;
   return (
     <div>
       <Card id="chatcard">
-        <CardImg top width="20%" width="50%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+        <CardImg src={imgUrl} alt="Card image cap" />
         <CardBody>
-          <CardTitle>Card title</CardTitle>
-          <CardSubtitle>Card subtitle</CardSubtitle>
-          <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+          <CardTitle>{venue.name}</CardTitle>
+          <CardSubtitle>{venue.location.address}</CardSubtitle>
+          <CardText>
+            {
+              venue.categories.map(tag => {
+                return (
+                  <Badge color="success" pill>{tag.name}</Badge>
+                );
+              })
+            } 
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+            </CardText>
           <input type="text"></input><Button>send</Button>
         </CardBody>
       </Card>
