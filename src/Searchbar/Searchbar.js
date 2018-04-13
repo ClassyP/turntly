@@ -8,33 +8,55 @@ import {
   FormGroup,
   HelpBlock
 } from "reactstrap";
+import "./Searchbar.css";
 
 export default class Searchbar extends React.Component {
-    state = {
-        value: "",
-    }
+  state = {
+    value: "",
+    location: ""
+  };
 
-  handleChange = (e) => {
+  handleChange = e => {
     e.preventDefault();
-    console.log("e", e);
-    console.log("e.target.value", e.target.value);
+    //console.log("e", e);
+    //console.log("e.target.value", e.target.value);
     this.setState({ value: e.target.value });
-  }
+  };
+
+  handleKeyPress = e => {
+    //console.log('e', e);
+    if (e.key === "Enter") {
+      this.handleSubmit();
+    }
+  };
 
   handleSubmit = () => {
-    this.props.query(this.state.value);
-  }
+    this.props.query(this.state.value, this.state.location);
+  };
 
   render() {
     return (
       <div>
         <InputGroup
           controlId="formBasicText"
-        //   validationState={this.getValidationState()}
+          //   validationState={this.getValidationState()}
         >
-          <Input />
+          <Input
+            name="value"
+            value={this.state.value}
+            onChange={this.handleChange} // updates this.state.value
+            onKeyPress={this.handleKeyPress} // checks for enter keypress
+          />
+          <Input
+            name="location"
+            value={this.state.location}
+            onChange={this.handleChange} // updates this.state.location
+            onKeyPress={this.handleKeyPress} // checks for enter keypress
+          />
           <InputGroupAddon addonType="append">
-            <Button onClick={this.handleSubmit} >Submit</Button>
+            <Button onClick={this.handleSubmit} id="submit">
+              Submit
+            </Button>
           </InputGroupAddon>
         </InputGroup>
       </div>

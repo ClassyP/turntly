@@ -1,34 +1,83 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 // import logo from './logo.png';
-import './App.css';
+import "./App.css";
 import Header from "./Header";
 import Chatcard from "./Chatcard";
 import Actions from "./Actions";
-
+import { Row, Col } from "reactstrap";
 class App extends Component {
   state = {
-   events: [], 
+<<<<<<< HEAD
+   venues: [], 
   }
 
   query = (search) => {
     Actions.getEvents(search)
         .then(res => {
             // console.log(res.data.response.venues);
-            const venues = res.data.response.venues;
-            this.setState({
-              events: venues,
+            let venues = res.data.response.venues;
+
+            let promises = venues.map(venue => {
+              return Actions.getImages(venue.id);
             });
-            console.log("App State", this.state);
-            // console.log("events", JSON.stringify(events, null, 2));
+
+            let that = this;
+            Promise.all(promises).then(function(imagesArray) {
+              console.log('imagesArray', imagesArray);
+              // put images object inside venue object
+              // venues.forEach((venue, i) => {
+                venue.images = imagesArray[i].data.response;
+              });
+
+              that.setState({
+                //venues: venues, // same thing
+                venues,
+              });
+              console.log("App State", venues);
+            });
+
+=======
+    venues: []
+  };
+
+  query = (search,location) => {
+    Actions.getEvents(search, location).then(res => {
+      // console.log(res.data.response.venues);
+      let venues = res.data.response.venues;
+
+      let promises = venues.map(venue => {
+        return Actions.getImages(venue.id);
+      });
+
+      let that = this;
+      Promise.all(promises).then(function(imagesArray) {
+        console.log("imagesArray", imagesArray);
+        // put images object inside venue object
+        venues.forEach((venue, i) => {
+          venue.images = imagesArray[i].data.response;
         });
- 
-  }
+>>>>>>> cda0f03c13fdd6e497d3776bae2e28853c65b9d6
+
+        that.setState({
+          //venues: venues, // same thing
+          venues
+        });
+        console.log("App State", venues);
+      });
+
+      // console.log("events", JSON.stringify(events, null, 2));
+    });
+  };
 
   render() {
     return (
       <div className="App">
-        <Header query={this.query} /> 
-        <Chatcard />
+        <Header query={this.query} />
+        <Row>
+          {this.state.venues.map(venue => {
+            return <Chatcard venue={venue} key={venue.id} />;
+          })}
+        </Row>
       </div>
     );
   }
