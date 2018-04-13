@@ -1,22 +1,10 @@
 {
-  "name": "mern",
-  "version": "1.0.0",
-  "description": "Mern Demo",
-  "main": "server.js",
-  "scripts": {
-    "server": "node server.js",
-    "client": "node scripts/start-client.js",
-    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
-    "build": "node scripts/build.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "concurrently": "^3.5.0",
-    "nodemon": "^1.11.0"
-  },
+  "name": "turntly",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:8080",
   "dependencies": {
+<<<<<<< HEAD
     "body-parser": "^1.18.2",
     "cookie-session": "^2.0.0-beta.3",
     "dotenv": "^5.0.1",
@@ -25,5 +13,22 @@
     "mongoose": "^5.0.14",
     "passport": "^0.4.0",
     "passport-google-oauth20": "^1.0.0"
+=======
+    "axios": "^0.18.0",
+    "bootstrap": "^4.0.0",
+    "express": "^4.16.3",
+    "npm": "^5.8.0",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-scripts": "1.1.4",
+    "reactstrap": "^5.0.0-beta.3",
+    "request": "^2.85.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+>>>>>>> 05dacea2961f420418737c57897ccfdceaf347a4
   }
 }
