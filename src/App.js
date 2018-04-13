@@ -7,36 +7,6 @@ import Actions from "./Actions";
 import { Row, Col } from "reactstrap";
 class App extends Component {
   state = {
-<<<<<<< HEAD
-   venues: [], 
-  }
-
-  query = (search) => {
-    Actions.getEvents(search)
-        .then(res => {
-            // console.log(res.data.response.venues);
-            let venues = res.data.response.venues;
-
-            let promises = venues.map(venue => {
-              return Actions.getImages(venue.id);
-            });
-
-            let that = this;
-            Promise.all(promises).then(function(imagesArray) {
-              console.log('imagesArray', imagesArray);
-              // put images object inside venue object
-              // venues.forEach((venue, i) => {
-                venue.images = imagesArray[i].data.response;
-              });
-
-              that.setState({
-                //venues: venues, // same thing
-                venues,
-              });
-              console.log("App State", venues);
-            });
-
-=======
     venues: []
   };
 
@@ -56,7 +26,6 @@ class App extends Component {
         venues.forEach((venue, i) => {
           venue.images = imagesArray[i].data.response;
         });
->>>>>>> cda0f03c13fdd6e497d3776bae2e28853c65b9d6
 
         that.setState({
           //venues: venues, // same thing

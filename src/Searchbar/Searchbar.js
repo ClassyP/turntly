@@ -15,13 +15,22 @@ export default class Searchbar extends React.Component {
     value: "",
     location: ""
   };
+  handleChange = event => {
+    // Getting the value and name of the input which triggered the change
+    const { name, value } = event.target;
 
-  handleChange = e => {
-    e.preventDefault();
-    //console.log("e", e);
-    //console.log("e.target.value", e.target.value);
-    this.setState({ value: e.target.value });
+    // Updating the input's state
+    this.setState({
+      [name]: value
+    });
   };
+
+  // handleChange = e => {
+  //   e.preventDefault();
+  //   //console.log("e", e);
+  //   //console.log("e.target.value", e.target.value);
+  //   this.setState({ value: e.target.value });
+  // };
 
   handleKeyPress = e => {
     //console.log('e', e);
