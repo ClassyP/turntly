@@ -1,21 +1,52 @@
-import React from 'react';
-import { Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button } from 'reactstrap';
+import React from "react";
+import {
+  Card,
+  CardImg,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  Button,
+  Badge,
+  Row,
+  Col
+} from "reactstrap";
+import "./Chatcard.css";
 
-const Chatcard = (props) => {
+const Chatcard = props => {
+  const venue = props.venue;
+  // prefix + size + suffix
+  const size = "300x500";
+  const imgUrl =
+    venue.images.photos.items[0].prefix +
+    size +
+    venue.images.photos.items[0].suffix;
   return (
-    <div>
-      <Card>
-        <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
-        <CardBody>
-          <CardTitle>Card title</CardTitle>
-          <CardSubtitle>Card subtitle</CardSubtitle>
-          <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-          <Button>Button</Button>
-        </CardBody>
-      </Card>
-    </div>
+    <Col sm="4">
+      <div>
+        <Card id="chatcard">
+          <CardImg src={imgUrl} alt="Card image cap" />
+          <CardBody>
+            <CardTitle>{venue.name}</CardTitle>
+            <CardSubtitle>{venue.location.address}</CardSubtitle>
+            <CardText>
+              {venue.categories.map(tag => {
+                return (
+                  <Badge color="success" pill key={tag.name}>
+                    {tag.name}
+                  </Badge>
+                );
+              })}
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </CardText>
+            <input type="text" />
+            <Button>send</Button>
+          </CardBody>
+        </Card>
+      </div>
+    </Col>
   );
 };
 
-export default Chatcard; 
+export default Chatcard;

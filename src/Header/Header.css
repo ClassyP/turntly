@@ -1,51 +1,31 @@
+#jumboheader {
+  background-image: url("./pexels-photo.jpg");
+  background-size: cover;
+  /* padding: 10px; */
+}
 
-  #jumboheader {
-    background-image: url("./pexels-photo.jpg");
-    background-size: cover;
-    /* padding: 10px; */
-  }
-  
-  /* .navbar-inverse {
-    background-color: #2460c100;
-    border-color: #e53c3700;
-  }
-  
-  .navbar-toggle {
-    border-color: #249ec1;
-  }
-  
-  .navbar-inverse .navbar-toggle {
-    border-color: none;
-  }
-  
-  .navbar-inverse .navbar-brand {
-    color: #249ec1;
-  }
-  
-  .navbar-brand > .active > a:hover,
-  .active > a:focus {
-    background: #249ec1;
-    text-decoration-color: #249ec1;
-  }
-  
-  .navbar-inverse .navbar-brand:hover,
-  .navbar-inverse .navbar-brand:focus {
-    background-color: #249ec1;
-    color: #249ec1;
-  }
-  
-  .navbar-inverse .navbar-nav > li > a:hover,
-  .navbar-inverse .navbar-nav > li > a:focus,
-  .navbar-inverse .navbar-nav > .open > a,
-  .navbar-inverse .navbar-nav > .open > a:hover,
-  .navbar-inverse .navbar-nav > .open > a:focus {
-    color: #ffffff;
-    background-color: #249ec1;
-    text-decoration: none;
-  }
-  
-  .navbar-inverse .navbar-collapse,
-  .navbar-inverse .navbar-form {
-    border-color: #e53c3700;
-  }
-   */
+.navbar-brand {
+  background-color: #2460c100;
+  border-color: #e53c3700;
+}
+
+.display-3 {
+  font-size: 4.5rem;
+  font-weight: 200;
+  line-height: 1.2;
+  color: #249ec1;
+  font-family: "Encode Sans Semi Condensed", sans-serif;
+  opacity: 0.8;
+}
+
+#search-key {
+  color: snow;
+  font-family: "Encode Sans Semi Condensed", sans-serif;
+  opacity: 0.8;
+}
+
+#turnt {
+  color: #2490c1;
+  text-shadow: 0px -2px 4px #fff, 0px -2px 10px #ff3, 0px -10px 20px #f90,
+    0px -20px 40px #c33;
+}

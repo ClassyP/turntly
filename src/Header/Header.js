@@ -14,8 +14,6 @@ import Searchbar from "../Searchbar";
 import "./Header.css";
 import logo from "./logo.png";
 
-
-
 export default class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -34,11 +32,12 @@ export default class Header extends React.Component {
   render() {
     return (
       <div>
-        <Jumbotron id = "jumboheader">
+        <Jumbotron id="jumboheader">
           <div>
             <Navbar color="faded" light>
-              <NavbarBrand href="/" Image src={logo.png} className="mr-auto">
-                beta v1.2
+              <NavbarBrand href="/" className="mr-auto">
+                {" "}
+                <img src={logo} width="256" height="110" alt="" />
               </NavbarBrand>
               <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
               <Collapse isOpen={!this.state.collapsed} navbar>
@@ -55,14 +54,16 @@ export default class Header extends React.Component {
               </Collapse>
             </Navbar>
           </div>
-          <h1 className="display-3">Search, Chat, Turntly</h1>
+          <h1 className="display-3">
+            Search, Chat, <span id="turnt">Turntly</span>
+          </h1>
           <p className="lead">
             {/* This is a simple hero unit, a simple Jumbotron-style component for
             calling extra attention to featured content or information. */}
           </p>
           <hr className="my-2" />
-          <p>
-           Search for Venues, checkin into events, and see whats Turntly
+          <p id="search-key">
+            Search for Venues, checkin into events, and see whats Turntly
           </p>
           <p className="lead">
             <Searchbar query={this.props.query} />
