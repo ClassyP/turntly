@@ -24,7 +24,7 @@ class App extends Component {
             Promise.all(promises).then(function(imagesArray) {
               console.log('imagesArray', imagesArray);
               // put images object inside venue object
-              venues.forEach((venue, i) => {
+              // venues.forEach((venue, i) => {
                 venue.images = imagesArray[i].data.response;
               });
 

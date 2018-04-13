@@ -5,11 +5,11 @@ import { Card, CardImg, CardText, CardBody,
 const Chatcard = (props) => {
   const venue = props.venue;
   // prefix + size + suffix
-  let size = '300x500';
+  const size = '300x500';
   const imgUrl = venue.images.photos.items[0].prefix + size + venue.images.photos.items[0].suffix;
   return (
     <div>
-      <Card id="chatcard" width='318' height='180'>
+      <Card id="chatcard">
         <CardImg src={imgUrl} alt="Card image cap" />
         <CardBody>
           <CardTitle>{venue.name}</CardTitle>
