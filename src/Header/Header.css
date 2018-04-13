@@ -11,18 +11,16 @@
 
 .display-3 {
   font-size: 4.5rem;
-  font-weight: 300;
+  font-weight: 200;
   line-height: 1.2;
   color: #249ec1;
-  /* font-family: "Permanent Marker", cursive; */
-  font-family: "Sarpanch", sans-serif;
+  font-family: "Encode Sans Semi Condensed", sans-serif;
   opacity: 0.8;
 }
 
 #search-key {
   color: snow;
-  /* font-family: "Permanent Marker", cursive; */
-  font-family: "Sarpanch", sans-serif;
+  font-family: "Encode Sans Semi Condensed", sans-serif;
   opacity: 0.8;
 }
 

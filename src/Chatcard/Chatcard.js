@@ -22,32 +22,30 @@ const Chatcard = props => {
     size +
     venue.images.photos.items[0].suffix;
   return (
-    <div>
-      <Row>
-        <Col sm="4">
-          <Card id="chatcard">
-            <CardImg src={imgUrl} alt="Card image cap" />
-            <CardBody>
-              <CardTitle>{venue.name}</CardTitle>
-              <CardSubtitle>{venue.location.address}</CardSubtitle>
-              <CardText>
-                {venue.categories.map(tag => {
-                  return (
-                    <Badge color="success" pill>
-                      {tag.name}
-                    </Badge>
-                  );
-                })}
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </CardText>
-              <input type="text" />
-              <Button>send</Button>
-            </CardBody>
-          </Card>
-        </Col>
-      </Row>
-    </div>
+    <Col sm="4">
+      <div>
+        <Card id="chatcard">
+          <CardImg src={imgUrl} alt="Card image cap" />
+          <CardBody>
+            <CardTitle>{venue.name}</CardTitle>
+            <CardSubtitle>{venue.location.address}</CardSubtitle>
+            <CardText>
+              {venue.categories.map(tag => {
+                return (
+                  <Badge color="success" pill key={tag.name}>
+                    {tag.name}
+                  </Badge>
+                );
+              })}
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </CardText>
+            <input type="text" />
+            <Button>send</Button>
+          </CardBody>
+        </Card>
+      </div>
+    </Col>
   );
 };
 
