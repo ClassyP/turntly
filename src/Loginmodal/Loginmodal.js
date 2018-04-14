@@ -31,7 +31,8 @@ class Loginmodel extends React.Component {
           <ModalHeader toggle={this.toggle}>Login</ModalHeader>
           <ModalBody>Form will be here</ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={this.toggle} href="/auth/google">
+            <a href="/auth/google">Google Login</a>
+            <Button color="primary" onClick={this.toggle}>
               Google Login
             </Button>{" "}
             <Button color="secondary" onClick={this.toggle}>
