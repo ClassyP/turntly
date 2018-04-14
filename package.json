@@ -2,7 +2,6 @@
   "name": "turntly",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:8080",
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.0.0",
