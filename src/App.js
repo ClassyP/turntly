@@ -10,8 +10,8 @@ class App extends Component {
     venues: []
   };
 
-  query = search => {
-    Actions.getEvents(search).then(res => {
+  query = (search,location) => {
+    Actions.getEvents(search, location).then(res => {
       // console.log(res.data.response.venues);
       let venues = res.data.response.venues;
 
