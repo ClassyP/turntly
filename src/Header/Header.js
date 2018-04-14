@@ -13,6 +13,7 @@ import {
 import Searchbar from "../Searchbar";
 import "./Header.css";
 import logo from "./logo.png";
+import Loginmodel from "../Loginmodal";
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -39,6 +40,7 @@ export default class Header extends React.Component {
                 {" "}
                 <img src={logo} width="256" height="110" alt="" />
               </NavbarBrand>
+              <Loginmodel />
               <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
               <Collapse isOpen={!this.state.collapsed} navbar>
                 <Nav navbar>
