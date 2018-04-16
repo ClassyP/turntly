@@ -14,6 +14,8 @@ import Searchbar from "../Searchbar";
 import "./Header.css";
 import logo from "./logo.png";
 import Loginmodel from "../Loginmodal";
+import Typewriter from "../Typewriter";
+import Actions from "../Actions";
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -45,10 +47,10 @@ export default class Header extends React.Component {
               <Collapse isOpen={!this.state.collapsed} navbar>
                 <Nav navbar>
                   <NavItem>
-                    <NavLink href="/components/">Components</NavLink>
+                    <NavLink href="#">My Account</NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink href="https://github.com/reactstrap/reactstrap">
+                    <NavLink href="https://github.com/ClassyP/turntly">
                       GitHub
                     </NavLink>
                   </NavItem>
@@ -57,8 +59,9 @@ export default class Header extends React.Component {
             </Navbar>
           </div>
           <h1 className="display-3">
-            Search, Chat, <span id="turnt">Turntly</span>
+            <Typewriter />
           </h1>
+
           <p className="lead">
             {/* This is a simple hero unit, a simple Jumbotron-style component for
             calling extra attention to featured content or information. */}
