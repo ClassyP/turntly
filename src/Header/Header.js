@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Button,
   Collapse,
   Jumbotron,
   Navbar,
@@ -15,7 +14,6 @@ import "./Header.css";
 import logo from "./logo.png";
 import Loginmodel from "../Loginmodal";
 import Typewriter from "../Typewriter";
-import Actions from "../Actions";
 
 export default class Header extends React.Component {
   constructor(props) {

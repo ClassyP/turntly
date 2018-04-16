@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Typist from "react-typist";
 import "./Typist.css";
 

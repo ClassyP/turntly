@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  InputGroup,
-  InputGroupAddon,
-  Button,
-  Input,
-  Form,
-  FormGroup,
-  HelpBlock
-} from "reactstrap";
+import { InputGroup, InputGroupAddon, Button, Input } from "reactstrap";
 import "./Searchbar.css";
 
 export default class Searchbar extends React.Component {
