@@ -38,7 +38,7 @@ export default class Header extends React.Component {
             <Navbar color="faded" light>
               <NavbarBrand href="/" className="mr-auto">
                 {" "}
-                <img src={logo} width="256" height="110" alt="" />
+                <img src={logo} alt="" id="logo" responsive />
               </NavbarBrand>
               <Loginmodel />
               <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />

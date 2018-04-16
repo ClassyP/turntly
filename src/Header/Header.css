@@ -18,6 +18,13 @@
   opacity: 0.9;
 }
 
+#logo {
+  max-width: 225px;
+  width: 100%;
+  max-height: 100px;
+  height: 100%;
+}
+
 #search-key {
   color: snow;
   font-family: "Encode Sans Semi Condensed", sans-serif;
