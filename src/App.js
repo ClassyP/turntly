@@ -4,14 +4,14 @@ import "./App.css";
 import Header from "./Header";
 import Chatcard from "./Chatcard";
 import Actions from "./Actions";
-import { Row, Col } from "reactstrap";
+import { Row } from "reactstrap";
 class App extends Component {
   state = {
     venues: []
   };
 
-  query = search => {
-    Actions.getEvents(search).then(res => {
+  query = (search,location) => {
+    Actions.getEvents(search, location).then(res => {
       // console.log(res.data.response.venues);
       let venues = res.data.response.venues;
 

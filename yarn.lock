@@ -1144,8 +1144,8 @@ boom@5.x.x:
     hoek "4.x.x"
 
 bootstrap@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.0.0.tgz#ceb03842c145fcc1b9b4e15da2a05656ba68469a"
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.1.0.tgz#110b05c31a236d56dbc9adcda6dd16f53738a28a"
 
 boxen@^1.2.1:
   version "1.3.0"
@@ -1432,10 +1432,6 @@ center-align@^0.1.1:
   dependencies:
     align-text "^0.1.3"
     lazy-cache "^1.0.3"
-
-chain-function@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/chain-function/-/chain-function-1.0.0.tgz#0d4ab37e7e18ead0bdc47b920764118ce58733dc"
 
 chalk@1.1.3, chalk@^1.1.3:
   version "1.1.3"
@@ -2239,7 +2235,7 @@ dom-converter@~0.1:
   dependencies:
     utila "~0.3"
 
-dom-helpers@^3.2.0:
+dom-helpers@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/dom-helpers/-/dom-helpers-3.3.1.tgz#fc1a4e15ffdf60ddde03a480a9c0fece821dd4a6"
 
@@ -4585,8 +4581,8 @@ libcipm@^1.6.0:
     worker-farm "^1.5.4"
 
 libnpx@^10.0.1:
-  version "10.0.1"
-  resolved "https://registry.yarnpkg.com/libnpx/-/libnpx-10.0.1.tgz#a0104a1336e7621e52172d7970dc1b97fa17ae89"
+  version "10.2.0"
+  resolved "https://registry.yarnpkg.com/libnpx/-/libnpx-10.2.0.tgz#1bf4a1c9f36081f64935eb014041da10855e3102"
   dependencies:
     dotenv "^5.0.1"
     npm-package-arg "^6.0.0"
@@ -5324,13 +5320,13 @@ npm-logical-tree@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/npm-logical-tree/-/npm-logical-tree-1.2.1.tgz#44610141ca24664cad35d1e607176193fd8f5b88"
 
-"npm-package-arg@^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0", "npm-package-arg@^4.0.0 || ^5.0.0 || ^6.0.0", npm-package-arg@^6.0.0, npm-package-arg@~6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/npm-package-arg/-/npm-package-arg-6.0.0.tgz#8cce04b49d3f9faec3f56b0fe5f4391aeb9d2fac"
+"npm-package-arg@^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0", "npm-package-arg@^4.0.0 || ^5.0.0 || ^6.0.0", npm-package-arg@^6.0.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/npm-package-arg/-/npm-package-arg-6.1.0.tgz#15ae1e2758a5027efb4c250554b85a737db7fcc1"
   dependencies:
-    hosted-git-info "^2.5.0"
-    osenv "^0.1.4"
-    semver "^5.4.1"
+    hosted-git-info "^2.6.0"
+    osenv "^0.1.5"
+    semver "^5.5.0"
     validate-npm-package-name "^3.0.0"
 
 npm-package-arg@^5.1.2:
@@ -5340,6 +5336,15 @@ npm-package-arg@^5.1.2:
     hosted-git-info "^2.4.2"
     osenv "^0.1.4"
     semver "^5.1.0"
+    validate-npm-package-name "^3.0.0"
+
+npm-package-arg@~6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/npm-package-arg/-/npm-package-arg-6.0.0.tgz#8cce04b49d3f9faec3f56b0fe5f4391aeb9d2fac"
+  dependencies:
+    hosted-git-info "^2.5.0"
+    osenv "^0.1.4"
+    semver "^5.4.1"
     validate-npm-package-name "^3.0.0"
 
 npm-packlist@^1.1.10, npm-packlist@~1.1.10:
@@ -6270,7 +6275,7 @@ promzard@^0.3.0:
   dependencies:
     read "1"
 
-prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.0:
+prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.1.tgz#36644453564255ddda391191fb3a125cbdf654ca"
   dependencies:
@@ -6542,14 +6547,12 @@ react-scripts@1.1.4:
     fsevents "^1.1.3"
 
 react-transition-group@^2.2.1:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-2.3.0.tgz#8dd1af58f6af284b19fd057f512e74f20438ad31"
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-2.3.1.tgz#31d611b33e143a5e0f2d94c348e026a0f3b474b6"
   dependencies:
-    chain-function "^1.0.0"
-    dom-helpers "^3.2.0"
+    dom-helpers "^3.3.1"
     loose-envify "^1.3.1"
-    prop-types "^15.5.8"
-    warning "^3.0.0"
+    prop-types "^15.6.1"
 
 react@^16.3.1:
   version "16.3.1"
@@ -8089,12 +8092,6 @@ walker@~1.0.5:
   resolved "https://registry.yarnpkg.com/walker/-/walker-1.0.7.tgz#2f7f9b8fd10d677262b18a884e28d19618e028fb"
   dependencies:
     makeerror "1.0.x"
-
-warning@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/warning/-/warning-3.0.0.tgz#32e5377cb572de4ab04753bdf8821c01ed605b7c"
-  dependencies:
-    loose-envify "^1.0.0"
 
 watch@~0.10.0:
   version "0.10.0"
