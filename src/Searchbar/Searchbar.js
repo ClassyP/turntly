@@ -44,12 +44,14 @@ export default class Searchbar extends React.Component {
         >
           <Input
             name="value"
+            placeholder="Venue or Event type"
             value={this.state.value}
             onChange={this.handleChange} // updates this.state.value
             onKeyPress={this.handleKeyPress} // checks for enter keypress
           />
           <Input
             name="location"
+            placeholder="Zip Code"
             value={this.state.location}
             onChange={this.handleChange} // updates this.state.location
             onKeyPress={this.handleKeyPress} // checks for enter keypress
