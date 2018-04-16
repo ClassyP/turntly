@@ -14,7 +14,7 @@ export default {
             near: location,
             query: event,
             v: '20180323',
-            limit: 3
+            limit: 9
           }
         });
 
