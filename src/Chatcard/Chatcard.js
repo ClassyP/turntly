@@ -8,7 +8,6 @@ import {
   CardSubtitle,
   Button,
   Badge,
-  Row,
   Col
 } from "reactstrap";
 import "./Chatcard.css";

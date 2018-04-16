@@ -4,7 +4,7 @@ import "./App.css";
 import Header from "./Header";
 import Chatcard from "./Chatcard";
 import Actions from "./Actions";
-import { Row, Col } from "reactstrap";
+import { Row } from "reactstrap";
 class App extends Component {
   state = {
     venues: []
