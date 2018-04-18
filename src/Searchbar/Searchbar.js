@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  InputGroup,
-  InputGroupAddon,
-  Button,
-  Input,
-  Form,
-  FormGroup,
-  HelpBlock
-} from "reactstrap";
+import { InputGroup, InputGroupAddon, Button, Input } from "reactstrap";
 import "./Searchbar.css";
 
 export default class Searchbar extends React.Component {
@@ -52,12 +44,14 @@ export default class Searchbar extends React.Component {
         >
           <Input
             name="value"
+            placeholder="Venue or Event"
             value={this.state.value}
             onChange={this.handleChange} // updates this.state.value
             onKeyPress={this.handleKeyPress} // checks for enter keypress
           />
           <Input
             name="location"
+            placeholder="Zip Code"
             value={this.state.location}
             onChange={this.handleChange} // updates this.state.location
             onKeyPress={this.handleKeyPress} // checks for enter keypress
