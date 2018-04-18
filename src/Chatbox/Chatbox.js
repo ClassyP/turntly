@@ -12,9 +12,9 @@ export default class Chatbox extends React.Component {
       messages: []
     };
 
-    this.socket = io("localhost:8080");
+    this.socket = io(window.location.hostname + ":4000");
 
-    this.socket.on("RECEIVE_MESSAGE", function(data) {
+    this.socket.on("output", function(data) {
       addMessage(data);
     });
 
@@ -26,7 +26,7 @@ export default class Chatbox extends React.Component {
 
     this.sendMessage = ev => {
       ev.preventDefault();
-      this.socket.emit("SEND_MESSAGE", {
+      this.socket.emit("input", {
         author: this.state.username,
         message: this.state.message
       });
