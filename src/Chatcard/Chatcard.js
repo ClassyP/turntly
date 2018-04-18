@@ -1,4 +1,5 @@
 import React from "react";
+import Chatbox from "../Chatbox";
 import {
   Card,
   CardImg,
@@ -8,7 +9,6 @@ import {
   CardSubtitle,
   Button,
   Badge,
-  Row,
   Col
 } from "reactstrap";
 import "./Chatcard.css";
@@ -37,11 +37,8 @@ const Chatcard = props => {
                   </Badge>
                 );
               })}
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
             </CardText>
-            <input type="text" />
-            <Button>send</Button>
+            <Chatbox />
           </CardBody>
         </Card>
       </div>

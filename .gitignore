@@ -9,9 +9,11 @@
 /coverage
 
 # production
-/build
+
 
 # misc
+.icloud
+.vscode
 .DS_Store
 .env.local
 .env.development.local
@@ -20,4 +22,8 @@
 
 npm-debug.log*
 yarn-debug.log*
+<<<<<<< HEAD
 yarn-error.log*
+=======
+yarn-error.log*
+>>>>>>> 15478f85977a8813700d9af54ff3dd5114b0d4ec
