@@ -1,0 +1,38 @@
+#jumboheader {
+  background-image: url("./turntly_backgroud.jpg");
+  background-size: cover;
+  /* padding: 10px; */
+}
+
+.navbar-brand {
+  background-color: #2460c100;
+  border-color: #e53c3700;
+}
+
+.display-3 {
+  font-size: 4.5rem;
+  font-weight: 200;
+  line-height: 1.2;
+  color: #246ec1;
+  font-family: "Encode Sans Semi Condensed", sans-serif;
+  opacity: 0.9;
+}
+
+#logo {
+  max-width: 225px;
+  width: 100%;
+  max-height: 100px;
+  height: 100%;
+}
+
+#search-key {
+  color: snow;
+  font-family: "Encode Sans Semi Condensed", sans-serif;
+  opacity: 0.8;
+}
+
+#turnt {
+  color: #2490c1;
+  text-shadow: 0px -2px 4px #fff, 0px -2px 10px #ff3, 0px -10px 20px #f90,
+    0px -20px 40px #c33;
+}

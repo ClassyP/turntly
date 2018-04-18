@@ -3,12 +3,13 @@
 # dependencies
 /node_modules
 /client/node_modules/
+/client/keys.js
 
 # testing
 /coverage
 
 # production
-/build
+
 
 # misc
 .icloud
@@ -23,5 +24,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-.vscode

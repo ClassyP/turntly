@@ -8,12 +8,11 @@ const MongoClient = require("mongodb").MongoClient;
 const f = require("util").format;
 const assert = require("assert");
 const keys = require('./config/keys.js');
-const PORT = process.env.PORT || 3001;
+require('./routes/authRoutes')(app);
 
+const PORT = process.env.PORT || 3001;
 const app = express();
 const chat = require("./chat/chat.js")(app);
-
-dotenv.load();
 
 app.use(express.static(path.join(__dirname, 'build')));
 
@@ -27,19 +26,14 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-require('./routes/authRoutes')(app);
-
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// Send every request to the React app
-// Define any API routes before this runs
 app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
 app.listen(PORT, function() {
   console.log(`Server now on port ${PORT}!`);
-});
