@@ -8,11 +8,12 @@ const MongoClient = require("mongodb").MongoClient;
 const f = require("util").format;
 const assert = require("assert");
 const keys = require('./config/keys.js');
-require('./routes/authRoutes')(app);
-const chat = require("./chat/chat.js")(app);
-
-const PORT = process.env.PORT || 3001;
 const app = express();
+require('./routes/authRoutes')(app);
+const chat = require("./chat/chat.js");
+chat();
+console.log("starting up");
+const PORT = process.env.PORT || 3001;
 
 app.use(express.static(path.join(__dirname, "build")));
 
