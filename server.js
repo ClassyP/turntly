@@ -9,12 +9,12 @@ const f = require("util").format;
 const assert = require("assert");
 const keys = require('./config/keys.js');
 require('./routes/authRoutes')(app);
+const chat = require("./chat/chat.js")(app);
 
 const PORT = process.env.PORT || 3001;
 const app = express();
-const chat = require("./chat/chat.js")(app);
 
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, "build")));
 
 app.use(bodyParser.json());
 app.use(
@@ -26,7 +26,6 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
@@ -37,3 +36,4 @@ app.get("/", function(req, res) {
 
 app.listen(PORT, function() {
   console.log(`Server now on port ${PORT}!`);
+});
