@@ -2,4 +2,11 @@
   border-color: #2490c1;
   background-color: #2460c1;
   color: #39e54b;
+  max-width: 9vw;
+  max-height: 7vh;
+}
+
+#login {
+  max-width: 6vw;
+  max-height: 6vh;
 }

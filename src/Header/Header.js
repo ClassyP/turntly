@@ -42,7 +42,7 @@ export default class Header extends React.Component {
                 <span id="beta">beta v1.4</span>
               </NavbarBrand>
               <Loginmodel />
-              <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
+              {/*<NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
               <Collapse isOpen={!this.state.collapsed} navbar>
                 <Nav navbar>
                   <NavItem>
@@ -54,7 +54,7 @@ export default class Header extends React.Component {
                     </NavLink>
                   </NavItem>
                 </Nav>
-              </Collapse>
+              </Collapse>*/}
             </Navbar>
           </div>
           <h1 className="display-3">

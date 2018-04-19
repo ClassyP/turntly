@@ -24,7 +24,7 @@ class Loginmodel extends React.Component {
       <div>
         <Button id="login-button" onClick={this.toggle}>
           {this.props.buttonLabel}
-          <img src={person} alt="person" />
+          <img src={person} alt="person" id="login" responsive />
         </Button>
         <Modal
           isOpen={this.state.modal}
