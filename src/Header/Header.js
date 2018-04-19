@@ -12,7 +12,7 @@ import {
 import Searchbar from "../Searchbar";
 import "./Header.css";
 import logo from "./logo.png";
-//import Loginmodel from "../Loginmodal";
+import Loginmodel from "../Loginmodal";
 import Typewriter from "../Typewriter";
 
 export default class Header extends React.Component {
@@ -41,7 +41,8 @@ export default class Header extends React.Component {
                 <img src={logo} alt="" id="logo" responsive />
                 <span id="beta">beta v1.4</span>
               </NavbarBrand>
-              <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
+              <Loginmodel />
+              {/*<NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
               <Collapse isOpen={!this.state.collapsed} navbar>
                 <Nav navbar>
                   <NavItem>
@@ -53,7 +54,7 @@ export default class Header extends React.Component {
                     </NavLink>
                   </NavItem>
                 </Nav>
-              </Collapse>
+              </Collapse>*/}
             </Navbar>
           </div>
           <h1 className="display-3">

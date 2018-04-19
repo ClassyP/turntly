@@ -1,5 +1,7 @@
 import React from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import person from "./person.svg";
+import "./Loginmodal.css";
 
 class Loginmodel extends React.Component {
   constructor(props) {
@@ -20,8 +22,9 @@ class Loginmodel extends React.Component {
   render() {
     return (
       <div>
-        <Button color="primary" onClick={this.toggle}>
-          {this.props.buttonLabel}Login
+        <Button id="login-button" onClick={this.toggle}>
+          {this.props.buttonLabel}
+          <img src={person} alt="person" id="login" responsive />
         </Button>
         <Modal
           isOpen={this.state.modal}
