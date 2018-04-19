@@ -1,7 +1,8 @@
 import React from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
-import person from "./person.svg";
+import logo from "./logo.png";
 import "./Loginmodal.css";
+import FaChild from "react-icons/lib/fa/child";
 
 class Loginmodel extends React.Component {
   constructor(props) {
@@ -24,15 +25,17 @@ class Loginmodel extends React.Component {
       <div>
         <Button id="login-button" onClick={this.toggle}>
           {this.props.buttonLabel}
-          <img src={person} alt="person" id="login" responsive />
+          <FaChild />
         </Button>
         <Modal
           isOpen={this.state.modal}
           toggle={this.toggle}
           className={this.props.className}
+          id="login-modal"
         >
-          <ModalHeader toggle={this.toggle}>Login</ModalHeader>
-          <ModalBody>Form will be here</ModalBody>
+          <ModalBody>
+            <img src={logo} alt="" id="logo" responsive />
+          </ModalBody>
           <ModalFooter>
             <Button color="primary" onClick={this.toggle} href="/auth/google">
               Google Login

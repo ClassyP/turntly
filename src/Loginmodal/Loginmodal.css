@@ -2,11 +2,23 @@
   border-color: #2490c1;
   background-color: #2460c1;
   color: #39e54b;
-  max-width: 9vw;
-  max-height: 7vh;
 }
 
 #login {
   max-width: 6vw;
   max-height: 6vh;
+  margin: auto;
+}
+
+#logo {
+  height: 100%;
+  max-width: 28.5vw;
+  max-height: 22.5vw;
+}
+
+#login-modal {
+  opacity: 0.9;
+  max-width: 50vh;
+  float: right;
+  padding-right: 5vh;
 }

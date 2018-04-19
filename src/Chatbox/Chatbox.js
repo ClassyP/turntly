@@ -39,8 +39,10 @@ export default class Chatbox extends React.Component {
         <div className="row">
           <div className="col">
             <div className="card">
-              <div className="card-body">
-                <div className="card-title">Turntly</div>
+              <div className="card-body" id="chatbox">
+                <div className="card-title" id="title">
+                  Turntly
+                </div>
                 <hr />
                 <div className="messages">
                   {this.state.messages.map((message, i) => {
@@ -61,7 +63,6 @@ export default class Chatbox extends React.Component {
                     }
                     className="form-control"
                   />
-                  <br />
                   <input
                     type="text"
                     placeholder="Message"
@@ -69,10 +70,10 @@ export default class Chatbox extends React.Component {
                     value={this.state.message}
                     onChange={ev => this.setState({ message: ev.target.value })}
                   />
-                  <br />
                   <button
                     onClick={this.sendMessage}
                     className="btn btn-primary form-control"
+                    id="send"
                   >
                     Send
                   </button>

@@ -1,2 +1,10 @@
 #chatcard {
+  border-color: #2490c1;
+}
+.card-text {
+  margin: 0;
+}
+
+.card-body {
+  padding: 0;
 }
