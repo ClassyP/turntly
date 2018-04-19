@@ -12,7 +12,7 @@ import {
 import Searchbar from "../Searchbar";
 import "./Header.css";
 import logo from "./logo.png";
-import Loginmodel from "../Loginmodal";
+//import Loginmodel from "../Loginmodal";
 import Typewriter from "../Typewriter";
 
 export default class Header extends React.Component {

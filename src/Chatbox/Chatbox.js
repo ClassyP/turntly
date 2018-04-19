@@ -43,9 +43,9 @@ export default class Chatbox extends React.Component {
                 <div className="card-title">Turntly</div>
                 <hr />
                 <div className="messages">
-                  {this.state.messages.map(message => {
+                  {this.state.messages.map((message, i) => {
                     return (
-                      <div>
+                      <div key={i}>
                         {message.author}: {message.message}
                       </div>
                     );

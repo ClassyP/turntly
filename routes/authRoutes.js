@@ -10,11 +10,12 @@ module.exports = app => {
         })
     );
 
-    //Passport attempts to  
+    //Passport attempts to 
     app.get(
         '/auth/google/callback',
         passport.authenticate('google'),
         (req, res) => {
+            console.log('res>>>>', res);
             res.redirect('/#');
         }
     );

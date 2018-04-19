@@ -1,12 +1,14 @@
 import React from "react";
 import { InputGroup, InputGroupAddon, Button, Input } from "reactstrap";
 import "./Searchbar.css";
+import axios from 'axios';
 
 export default class Searchbar extends React.Component {
   state = {
     value: "",
     location: ""
   };
+
   handleChange = event => {
     // Getting the value and name of the input which triggered the change
     const { name, value } = event.target;
@@ -62,6 +64,20 @@ export default class Searchbar extends React.Component {
             </Button>
           </InputGroupAddon>
         </InputGroup>
+        {/* button was for test purposes */}
+        {/* <button
+          onClick={() => {
+            axios.get('/auth/google')
+            .then(res => {
+              console.log('res<<<<<', res);
+            })
+            .catch(function (error) {
+              console.log('error>>>>', error);
+            });
+          }}
+        >
+          Click for fun
+        </button> */}
       </div>
     );
   }
