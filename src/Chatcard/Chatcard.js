@@ -1,4 +1,5 @@
 import React from "react";
+import Chatbox from "../Chatbox";
 import {
   Card,
   CardImg,
@@ -6,21 +7,25 @@ import {
   CardBody,
   CardTitle,
   CardSubtitle,
-  Button,
   Badge,
-  Row,
   Col
 } from "reactstrap";
 import "./Chatcard.css";
 
 const Chatcard = props => {
   const venue = props.venue;
+  console.log('venue', venue);
   // prefix + size + suffix
   const size = "300x500";
-  const imgUrl =
-    venue.images.photos.items[0].prefix +
-    size +
-    venue.images.photos.items[0].suffix;
+  let imgUrl = 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Emoticon_Face_Frown_GE.png/220px-Emoticon_Face_Frown_GE.png';
+
+  // if there are no images it will break so we check first
+  if (venue.images.photos.items.length > 0) {
+    imgUrl =
+      venue.images.photos.items[0].prefix +
+      size +
+      venue.images.photos.items[0].suffix;
+  }
   return (
     <Col sm="4">
       <div>
@@ -37,11 +42,8 @@ const Chatcard = props => {
                   </Badge>
                 );
               })}
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
             </CardText>
-            <input type="text" />
-            <Button>send</Button>
+            <Chatbox />
           </CardBody>
         </Card>
       </div>
