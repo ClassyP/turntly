@@ -33,17 +33,19 @@ const Chatcard = props => {
         <Card id="chatcard">
           <CardImg src={imgUrl} alt="Card image cap" />
           <CardBody>
-            <CardTitle>{venue.name}</CardTitle>
-            <CardSubtitle>{venue.location.address}</CardSubtitle>
-            <CardText>
-              {venue.categories.map(tag => {
-                return (
-                  <Badge color="success" pill key={tag.name}>
-                    {tag.name}
-                  </Badge>
-                );
-              })}
-            </CardText>
+            <div class="card-info">
+              <CardTitle>{venue.name}</CardTitle>
+              <CardSubtitle>{venue.location.address}</CardSubtitle>
+              <CardText>
+                {venue.categories.map(tag => {
+                  return (
+                    <Badge color="success" pill key={tag.name}>
+                      {tag.name}
+                    </Badge>
+                  );
+                })}
+              </CardText>
+            </div>
             <Chatbox />
           </CardBody>
         </Card>
