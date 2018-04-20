@@ -10,11 +10,9 @@
 }
 
 .display-3 {
-  font-size: 4.5rem;
-  font-weight: 200;
   line-height: 1.2;
   color: #246ec1;
-  font-family: "Encode Sans Semi Condensed", sans-serif;
+  font-family: "Black Han Sans", sans-serif;
   opacity: 0.9;
 }
 
@@ -29,7 +27,7 @@
 
 #search-key {
   color: snow;
-  font-family: "Encode Sans Semi Condensed", sans-serif;
+  font-family: "Black Han Sans", sans-serif;
   opacity: 0.8;
 }
 

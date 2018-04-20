@@ -33,6 +33,17 @@ export default class Chatbox extends React.Component {
       this.setState({ message: "" });
     };
   }
+
+  displayMessages = () => {
+    if (this.state.message.length > 0)
+      return this.state.messages[0].map((message, i) => (
+        <div key={i}>
+          {message.name}: {message.message}
+        </div>
+      ));
+    else return null;
+  };
+
   render() {
     return (
       <div className="card">
@@ -41,15 +52,7 @@ export default class Chatbox extends React.Component {
             Turntly
           </div>
           <hr />
-          <div className="messages">
-            {this.state.messages.map((message, i) => {
-              return (
-                <div key={i}>
-                  {message.author}: {message.message}
-                </div>
-              );
-            })}
-          </div>
+          <div className="messages">{this.displayMessages()}</div>
           <div className="footer">
             <input
               type="text"
