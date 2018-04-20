@@ -10,7 +10,7 @@ const assert = require("assert");
 const keys = require('./config/keys.js');
 const app = express();
 console.log('before');
-//require('./routes/authRoutes')(app);
+require('./routes/authRoutes')(app);
 console.log('after');
 const chat = require("./chat/chat.js");
 
@@ -31,31 +31,6 @@ passport.use(new GoogleStrategy({
   return cb(null, profile);
 }));
 
-app.get(
-  '/auth/google',
-  passport.authenticate('google', {
-      scope: ['profile', 'email']
-  })
-);
-
-//Passport attempts to 
-app.get(
-  '/auth/google/callback',
-  passport.authenticate('google'),
-  (req, res) => {
-      console.log('res>>>>', res);
-      res.redirect('/#');
-  }
-);
-
-app.get('/api/logout', (req, res) => {
-  req.logout();
-  res.redirect('/');
-});
-
-app.get('/api/current_user', (res, req) => {
-  res.send(req.user);
-});
 
   /*function(accessToken, refreshToken, profile, cb) {
     User.findOrCreate({ googleId: profile.id }, function (err, user) {
