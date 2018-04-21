@@ -10,11 +10,9 @@
 }
 
 .display-3 {
-  font-size: 4.5rem;
-  font-weight: 200;
   line-height: 1.2;
   color: #246ec1;
-  font-family: "Encode Sans Semi Condensed", sans-serif;
+  font-family: "Black Han Sans", sans-serif;
   opacity: 0.9;
 }
 
@@ -23,11 +21,13 @@
   width: 100%;
   max-height: 100px;
   height: 100%;
+  max-width: 28.5vw;
+  max-height: 22.5vw;
 }
 
 #search-key {
   color: snow;
-  font-family: "Encode Sans Semi Condensed", sans-serif;
+  font-family: "Black Han Sans", sans-serif;
   opacity: 0.8;
 }
 
@@ -39,7 +39,7 @@
 
 #beta {
   color: #2490c1;
-  font-size: 10px;
+  font-size: 1.5vw;
   text-shadow: 0px -2px 4px #fff, 0px -2px 10px #ff3, 0px -10px 20px #f90,
     0px -20px 40px #c33;
 }

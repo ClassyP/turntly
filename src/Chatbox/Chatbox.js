@@ -33,52 +33,48 @@ export default class Chatbox extends React.Component {
       this.setState({ message: "" });
     };
   }
+
+  displayMessages = () => {
+    if (this.state.message.length > 0)
+      return this.state.messages[0].map((message, i) => (
+        <div key={i}>
+          {message.name}: {message.message}
+        </div>
+      ));
+    else return null;
+  };
+
   render() {
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col">
-            <div className="card">
-              <div className="card-body">
-                <div className="card-title">Turntly</div>
-                <hr />
-                <div className="messages">
-                  {this.state.messages.map((message, i) => {
-                    return (
-                      <div key={i}>
-                        {message.author}: {message.message}
-                      </div>
-                    );
-                  })}
-                </div>
-                <div className="footer">
-                  <input
-                    type="text"
-                    placeholder="Username"
-                    value={this.state.username}
-                    onChange={ev =>
-                      this.setState({ username: ev.target.value })
-                    }
-                    className="form-control"
-                  />
-                  <br />
-                  <input
-                    type="text"
-                    placeholder="Message"
-                    className="form-control"
-                    value={this.state.message}
-                    onChange={ev => this.setState({ message: ev.target.value })}
-                  />
-                  <br />
-                  <button
-                    onClick={this.sendMessage}
-                    className="btn btn-primary form-control"
-                  >
-                    Send
-                  </button>
-                </div>
-              </div>
-            </div>
+      <div className="card">
+        <div className="card-body" id="chatbox">
+          <div className="card-title" id="title">
+            Turntly
+          </div>
+          <hr />
+          <div className="messages">{this.displayMessages()}</div>
+          <div className="footer">
+            <input
+              type="text"
+              placeholder="Username"
+              value={this.state.username}
+              onChange={ev => this.setState({ username: ev.target.value })}
+              className="form-control"
+            />
+            <input
+              type="text"
+              placeholder="Message"
+              className="form-control"
+              value={this.state.message}
+              onChange={ev => this.setState({ message: ev.target.value })}
+            />
+            <button
+              onClick={this.sendMessage}
+              className="btn btn-primary form-control"
+              id="send"
+            >
+              Send
+            </button>
           </div>
         </div>
       </div>

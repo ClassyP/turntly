@@ -1,8 +1,30 @@
 .card-body {
-  margin: auto;
+  margin: 0;
   padding: 0;
+}
+
+#title {
+  padding: 0;
+  margin-bottom: 0;
 }
 
 .messages {
   height: 80px;
+  margin: auto;
+}
+
+.img {
+}
+
+#chatbox {
+  max-width: 100%;
+  padding: 1px;
+}
+
+#send {
+  color: snow;
+  background-color: #2490c1;
+}
+
+.footer {
 }
