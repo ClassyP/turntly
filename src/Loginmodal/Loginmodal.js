@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import AuthButtons from "../Auth/AuthButtons";
 import logo from "./logo.png";
 import "./Loginmodal.css";
 import FaChild from "react-icons/lib/fa/child";
@@ -37,12 +38,7 @@ class Loginmodel extends React.Component {
             <img src={logo} alt="" id="logo" responsive />
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={this.toggle} href="/auth/google">
-              Google Login
-            </Button>{" "}
-            <Button color="secondary" onClick={this.toggle}>
-              Cancel
-            </Button>
+            <AuthButtons />
           </ModalFooter>
         </Modal>
       </div>
