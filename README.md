@@ -4,7 +4,7 @@
 
 Turntly is a lifestyle! Are you ready to have fun? Do you know where the fun is? Turntly is here to make sure every moment int your life isn't Lame
 
-## Starting the app locally
+## Contribute to the Coolest party App
 
 Start by installing front and backend dependencies. While in this directory, run the following commands:
 
