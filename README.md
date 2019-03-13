@@ -1,21 +1,13 @@
-# Create React Express App
+# Turntly!!
 
-## About This Boilerplate
+## What is Turntly?
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
-
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+Turntly is a lifestyle! Are you ready to have fun? Do you know where the fun is? Turntly is here to make sure every moment int your life isn't Lame
 
 ## Starting the app locally
 
 Start by installing front and backend dependencies. While in this directory, run the following commands:
 
-```
-yarn install
-cd client
-yarn install
-cd ..
-``
 
 After both installations complete, run the following command in your terminal:
 
